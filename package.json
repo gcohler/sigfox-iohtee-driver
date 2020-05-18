@@ -1,0 +1,29 @@
+{
+  "name": "sigfox-iohtee-driver",
+  "version": "0.1.0",
+  "description": "Driver for IohTee Sigfox modules",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gcohler/sigfox-iohtee-driver"
+  },
+  "scripts": {
+    "test": "mocha --timeout=20000 --reporter spec --exit"
+  },
+  "keywords": [
+    "sigfox",
+    "iohtee"
+  ],
+  "author": "Geoffrey Cohler <g.cohler@computer.org>",
+  "license": "MIT",
+  "dependencies": {
+    "serialport": "^9.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2"
+  },
+  "engines": {
+    "node": ">=8.10"
+  }
+}
