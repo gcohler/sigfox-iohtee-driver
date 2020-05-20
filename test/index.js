@@ -32,8 +32,8 @@ describe('basic checks', function(done) {
 describe('core features', () => {
   it('should fail with non-buffer message', () => {
     let driver = new Driver('/dev/ttyUSB0');
-    console.log("      Waiting 2 sec for driver to open");
-    return setTimeoutPromise(2000).then(() => {
+    console.log("      Wait for port to be ready");
+    return driver.waitPortReady().then(() => {
       console.log("      Checking if module is alive");
       return driver.checkModuleIsAlive()
     }).then(() => {
@@ -53,8 +53,8 @@ describe('core features', () => {
 
   it('should fail with too-short message', () => {
     let driver = new Driver('/dev/ttyUSB0');
-    console.log("      Waiting 2 sec for driver to open");
-    return setTimeoutPromise(2000).then(() => {
+    console.log("      Wait for port to be ready");
+    return driver.waitPortReady().then(() => {
       console.log("      Checking if module is alive");
       return driver.checkModuleIsAlive()
     }).then(() => {
@@ -74,8 +74,8 @@ describe('core features', () => {
 
   it('should fail with too-long message', () => {
     let driver = new Driver('/dev/ttyUSB0');
-    console.log("      Waiting 2 sec for driver to open");
-    return setTimeoutPromise(2000).then(() => {
+    console.log("      Wait for port to be ready");
+    return driver.waitPortReady().then(() => {
       console.log("      Checking if module is alive");
       return driver.checkModuleIsAlive()
     }).then(() => {
@@ -95,8 +95,8 @@ describe('core features', () => {
 
   it('should open, be alive, get metadata, send message', () => {
     let driver = new Driver('/dev/ttyUSB0');
-    console.log("      Waiting 2 sec for driver to open");
-    return setTimeoutPromise(2000).then(() => {
+    console.log("      Wait for port to be ready");
+    return driver.waitPortReady().then(() => {
       console.log("      Checking if module is alive");
       return driver.checkModuleIsAlive()
     }).then(() => {
